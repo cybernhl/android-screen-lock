@@ -2,8 +2,9 @@ package com.txiao.fossil.lock;
 
 import android.app.NotificationManager;
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 

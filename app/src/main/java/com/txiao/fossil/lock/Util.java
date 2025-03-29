@@ -7,11 +7,14 @@ import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
-import android.support.v4.app.NotificationCompat;
+
+import androidx.annotation.RequiresApi;
+import androidx.core.app.NotificationCompat;
 
 /**
  * Created by txiao on 3/13/18.
@@ -28,6 +31,7 @@ public class Util {
 
     private static boolean hasNotificationsBeenCleared = false;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public static void configure(Context context, NotificationManager mNotificationManager) {
         // The id of the channel.
         String id = "channel_01";
